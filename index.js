@@ -22,6 +22,6 @@ function getCookie(name) {
 let cookieValue = getCookie("username");
 
 function handleClick() {
-  title.textContent = cookieValue;
+  title.textContent = "This is " + cookieValue;
 }
 setCookie("username", "John", 7);
