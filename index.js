@@ -1,3 +1,6 @@
+const title = document.getElementById("title");
+const btn = document.getElementById("btn");
+
 function setCookie(name, value, days) {
   var expires = "";
 
@@ -16,9 +19,9 @@ function getCookie(name) {
   if (parts.length === 2) return parts.pop().split(";").shift();
 }
 
-function setTitle() {
-  document.getElementById("title").innerHTML =
-    "This is " + getCookie("username");
+let cookieValue = getCookie("username");
+
+function handleClick() {
+  title.textContent = cookieValue;
 }
 setCookie("username", "John", 7);
-setTitle();
