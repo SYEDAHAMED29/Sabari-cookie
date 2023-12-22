@@ -20,10 +20,5 @@ function setTitle() {
   document.getElementById("title").innerHTML =
     "This is " + getCookie("username");
 }
-
-// // Example: Set a cookie named "username" with the value "John" that expires in 7 days
-// setCookie("username", "John", 7);
-
-const btn = document.getElementById("btn");
-
-btn.addEventListener("click", setCookie("username", "John", 7));
+setCookie("username", "John", 7);
+setTitle();
