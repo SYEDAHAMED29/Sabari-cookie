@@ -10,7 +10,8 @@ function setCookie(name, value, days) {
     expires = "; expires=" + date.toUTCString();
   }
 
-  document.cookie = name + "=" + value + expires + "; path=/";
+  document.cookie =
+    name + "=" + value + expires + "; path=/; SameSite=None; Secure";
 }
 
 function getCookie(name) {
@@ -24,4 +25,5 @@ let cookieValue = getCookie("username");
 function handleClick() {
   title.textContent = "This is " + cookieValue;
 }
+
 setCookie("username", "John", 7);
